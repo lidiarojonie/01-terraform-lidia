@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Práctica DEVOPS 00: publicación de una web estática en Amazon S3 con IA, MCP y Terraform.">
+	<title>DEVOPS 00 | Lidia Rojo</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/app.js" defer></script>
+</head>
+<body>
+	<header class="site-header" id="inicio">
+		<nav class="nav container" aria-label="Navegación principal">
+			<a class="brand" href="#inicio" aria-label="Volver al inicio">
+				<span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+				<span>DEVOPS <strong>00</strong></span>
+			</a>
+			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+				<span></span><span></span><span></span>
+				<span class="sr-only">Abrir menú</span>
+			</button>
+			<div class="nav-links" id="main-menu">
+				<a href="#conceptos">Conceptos</a>
+				<a href="#flujo">Flujo</a>
+				<a href="#practica">Práctica</a>
+				<a class="nav-cta" href="#footer">Ver proyecto <span aria-hidden="true">↗</span></a>
+			</div>
+		</nav>
+
+		<div class="hero container">
+			<div class="hero-copy reveal">
+				<p class="eyebrow"><span class="status-dot"></span> Práctica de despliegue · 2026</p>
+				<h1>De una idea a una web <em>en la nube.</em></h1>
+				<p class="hero-text">Una ruta clara para entender cómo la inteligencia artificial y las herramientas DevOps convierten código en una experiencia web pública.</p>
+				<div class="hero-actions">
+					<a class="button button-primary" href="#flujo">Explorar el flujo <span aria-hidden="true">↓</span></a>
+					<a class="text-link" href="#conceptos">Conocer los conceptos <span aria-hidden="true">→</span></a>
+				</div>
+			</div>
+			<div class="hero-visual reveal" aria-label="Ilustración de una arquitectura cloud">
+				<div class="orbit orbit-one"></div>
+				<div class="orbit orbit-two"></div>
+				<div class="cloud-core"><span aria-hidden="true">☁</span><small>AWS<br>STATIC WEB</small></div>
+				<div class="signal signal-one"><span>HTML</span></div>
+				<div class="signal signal-two"><span>TF</span></div>
+				<div class="signal signal-three"><span>AI</span></div>
+				<p class="visual-caption">infraestructura + creatividad</p>
+			</div>
+		</div>
+		<div class="hero-grid" aria-hidden="true"></div>
+	</header>
+
+	<main>
+		<section class="concepts section container" id="conceptos">
+			<div class="section-heading reveal">
+				<p class="eyebrow">01 / El kit de trabajo</p>
+				<h2>Tres piezas, una misma dirección.</h2>
+				<p>Las herramientas cumplen papeles distintos, pero juntas hacen que publicar sea repetible, comprensible y rápido.</p>
+			</div>
+			<div class="concept-grid">
+				<article class="concept-card concept-terraform reveal">
+					<div class="card-top"><span class="card-icon">⌘</span><span class="card-number">01</span></div>
+					<h3>Terraform</h3>
+					<p>Terraform describe la infraestructura con archivos de configuración. Así podemos crear y repetir recursos de AWS sin configurarlos manualmente uno a uno.</p>
+					<div class="code-line"><span>resource</span> &quot;aws_s3_bucket&quot;</div>
+				</article>
+				<article class="concept-card concept-s3 reveal">
+					<div class="card-top"><span class="card-icon">◈</span><span class="card-number">02</span></div>
+					<h3>Amazon S3</h3>
+					<p>Amazon S3 es un servicio de almacenamiento de objetos. En esta práctica guarda los archivos de la web y los sirve para que puedan visitarse desde internet.</p>
+					<div class="code-line"><span>bucket</span> / proyecto-web</div>
+				</article>
+				<article class="concept-card concept-mcp reveal">
+					<div class="card-top"><span class="card-icon">✦</span><span class="card-number">03</span></div>
+					<h3>MCP</h3>
+					<p>Model Context Protocol es un estándar que permite a un asistente de IA conectar con herramientas y contexto de forma estructurada, con más utilidad y control.</p>
+					<div class="code-line"><span>context</span> → acción asistida</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="workflow section" id="flujo">
+			<div class="container">
+				<div class="section-heading workflow-heading reveal">
+					<p class="eyebrow">02 / La ruta</p>
+					<h2>Del editor al navegador.</h2>
+					<p>Un flujo de trabajo sencillo: cada paso aporta una capa hasta que la web queda lista para ser visitada.</p>
+				</div>
+				<div class="flow-track" aria-label="Flujo del proyecto">
+					<div class="flow-step reveal"><span class="flow-icon">⌘</span><strong>Visual Studio Code</strong><small>punto de partida</small></div>
+					<span class="flow-arrow" aria-hidden="true">↓</span>
+					<div class="flow-step reveal"><span class="flow-icon">✦</span><strong>Asistente de IA</strong><small>ideas y contexto</small></div>
+					<span class="flow-arrow" aria-hidden="true">↓</span>
+					<div class="flow-step reveal"><span class="flow-icon">&lt;/&gt;</span><strong>HTML / CSS / JavaScript</strong><small>experiencia web</small></div>
+					<span class="flow-arrow" aria-hidden="true">↓</span>
+					<div class="flow-step reveal"><span class="flow-icon">⌁</span><strong>Terraform + AWS CLI</strong><small>automatización</small></div>
+					<span class="flow-arrow" aria-hidden="true">↓</span>
+					<div class="flow-step flow-final reveal"><span class="flow-icon">☁</span><strong>Amazon S3</strong><small>web desplegada</small></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="practice section container" id="practica">
+			<div class="practice-panel reveal">
+				<div class="practice-copy">
+					<p class="eyebrow">03 / La práctica</p>
+					<h2>Publicar también es aprender a mirar el sistema completo.</h2>
+					<p>Esta práctica conecta el desarrollo frontend con la infraestructura cloud. El resultado no es solo una página: es una pequeña cadena de entrega documentada y lista para repetir.</p>
+					<div class="student-tag"><span class="avatar">LR</span><span>Realizado por <strong>Lidia Rojo</strong></span></div>
+				</div>
+				<div class="practice-stats" aria-label="Resumen de la práctica">
+					<div><strong>01</strong><span>web estática</span></div>
+					<div><strong>03</strong><span>herramientas clave</span></div>
+					<div><strong>∞</strong><span>posibilidades</span></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer" id="footer">
+		<div class="container footer-inner">
+			<div><a class="brand" href="#inicio"><span class="brand-mark">&lt;/&gt;</span><span>DEVOPS <strong>00</strong></span></a><p>Una web estática, muchas ideas en movimiento.</p></div>
+			<div class="footer-meta"><span>Lidia Rojo</span><span>HTML · CSS · JavaScript</span><span id="year">2026</span></div>
+		</div>
+	</footer>
+	<button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
+</body>
+</html>
