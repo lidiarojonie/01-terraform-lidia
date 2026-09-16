@@ -16,8 +16,7 @@ resource "aws_s3_bucket" "bucket_prueba" {
 
 resource "aws_vpc" "vpc_prueba" {
   cidr_block = "10.0.0.0/16"
-
   tags = {
     Name = "devops-vpc-prueba"
-  }
-}
+	  }
+	} 
